@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { ArrowRight, Users, Star, Award } from 'lucide-react'
-import logo from '../../imports/logo.png'
+import profileImg from '../../imports/image-1.png'
 
 export default function Hero() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -101,11 +101,11 @@ export default function Hero() {
             className="flex flex-col items-center gap-6"
           >
             <div className="relative flex items-center justify-center">
-              <div className="absolute -inset-8 rounded-full bg-green-500/8 blur-3xl" />
+              <div className="absolute -inset-4 rounded-3xl bg-green-500/10 blur-2xl" />
               <img
-                src={logo}
-                alt="Harshavardhan Logo"
-                className="relative w-72 h-72 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
+                src={profileImg}
+                alt="Harshavardhan"
+                className="relative w-72 h-72 lg:w-80 lg:h-80 object-cover rounded-3xl border-2 border-green-500/20 shadow-2xl shadow-green-500/10"
               />
             </div>
 
