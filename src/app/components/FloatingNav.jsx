@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 
 const navItems = [
-  { id: 'home', label: 'Home' },
-  { id: 'system', label: 'System' },
+  { id: 'home',    label: 'Home' },
+  { id: 'system',  label: 'System' },
   { id: 'results', label: 'Results' },
   { id: 'pricing', label: 'Pricing' },
-  { id: 'about', label: 'About' },
+  { id: 'about',   label: 'About' },
 ]
 
 export default function FloatingNav() {
@@ -23,10 +23,7 @@ export default function FloatingNav() {
       const scrollY = window.scrollY + 120
       for (let i = navItems.length - 1; i >= 0; i--) {
         const el = document.getElementById(navItems[i].id)
-        if (el && el.offsetTop <= scrollY) {
-          setActive(navItems[i].id)
-          break
-        }
+        if (el && el.offsetTop <= scrollY) { setActive(navItems[i].id); break }
       }
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -48,7 +45,7 @@ export default function FloatingNav() {
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
         >
-          <div className="flex items-center gap-0.5 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl shadow-black/50 px-2 py-1.5">
+          <div className="flex items-center gap-0.5 bg-[#111111]/95 backdrop-blur-xl border border-white/8 rounded-full shadow-2xl shadow-black/60 px-2 py-1.5">
             {navItems.map(({ id, label }) => (
               <button
                 key={id}
@@ -58,11 +55,11 @@ export default function FloatingNav() {
                 {active === id && (
                   <motion.div
                     layoutId="activeNavPill"
-                    className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full"
+                    className="absolute inset-0 bg-green-600 rounded-full"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
-                <span className={`relative z-10 ${active === id ? 'text-white' : 'text-slate-500 hover:text-slate-300'}`}>
+                <span className={`relative z-10 ${active === id ? 'text-white' : 'text-zinc-600 hover:text-zinc-300'}`}>
                   {label}
                 </span>
               </button>

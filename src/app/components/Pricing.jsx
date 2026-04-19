@@ -2,7 +2,6 @@ import { motion } from 'motion/react'
 import { Check, X, ArrowRight } from 'lucide-react'
 
 const WHATSAPP_NUMBER = '917021172760'
-
 const openWhatsApp = (plan) => {
   const msg = encodeURIComponent(`Hi! I'm interested in the ${plan} coaching plan.`)
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank')
@@ -25,8 +24,8 @@ const plans = [
       { text: '24/7 WhatsApp Support', included: false },
     ],
     cta: 'Get Started',
-    cardClass: 'bg-white/5 border border-white/10',
-    btnClass: 'border border-white/20 text-white hover:bg-white/10',
+    cardClass: 'bg-[#141414] border border-white/8',
+    btnClass: 'border border-white/12 text-zinc-300 hover:bg-white/5',
     highlight: false,
   },
   {
@@ -45,8 +44,8 @@ const plans = [
       { text: 'Daily 1-on-1 Sessions', included: false },
     ],
     cta: 'Apply for Coaching',
-    cardClass: 'bg-gradient-to-b from-cyan-500/10 to-blue-600/10 border-2 border-cyan-500/40',
-    btnClass: 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:shadow-lg hover:shadow-cyan-500/30',
+    cardClass: 'bg-[#141414] border-2 border-green-500/40',
+    btnClass: 'bg-green-600 hover:bg-green-500 text-white hover:shadow-lg hover:shadow-green-500/20',
     highlight: true,
   },
   {
@@ -65,15 +64,15 @@ const plans = [
       { text: 'Extended Program Access', included: true },
     ],
     cta: 'Apply for Coaching',
-    cardClass: 'bg-white/5 border border-blue-400/30',
-    btnClass: 'border border-blue-400/40 text-blue-300 hover:bg-blue-500/10',
+    cardClass: 'bg-[#141414] border border-green-500/20',
+    btnClass: 'border border-green-500/30 text-green-400 hover:bg-green-500/8',
     highlight: false,
   },
 ]
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-[#080d1a]">
+    <section id="pricing" className="py-24 bg-[#090909]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,10 +81,10 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-4">
             Investment
           </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
             Choose Your Plan
           </h2>
         </motion.div>
@@ -98,11 +97,11 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative rounded-3xl p-6 backdrop-blur-sm ${plan.cardClass} ${plan.highlight ? 'md:scale-105 shadow-2xl shadow-cyan-500/20' : ''}`}
+              className={`relative rounded-3xl p-6 ${plan.cardClass} ${plan.highlight ? 'md:scale-105 shadow-2xl shadow-green-500/10' : ''}`}
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-bold rounded-full uppercase tracking-wider shadow-lg shadow-cyan-500/30">
+                  <span className="px-4 py-1.5 bg-green-600 text-white text-xs font-bold rounded-full uppercase tracking-wider shadow-lg shadow-green-500/20">
                     {plan.badge}
                   </span>
                 </div>
@@ -111,26 +110,22 @@ export default function Pricing() {
               <div className="mb-6">
                 <h3 className="font-bold text-white text-xl mb-3">{plan.name}</h3>
                 <div className="text-4xl font-bold text-white">{plan.price}</div>
-                <div className="text-xs font-medium text-cyan-400 mt-1">{plan.validity}</div>
+                <div className="text-xs font-medium text-green-400 mt-1">{plan.validity}</div>
               </div>
 
               <ul className="space-y-3 mb-6">
                 {plan.features.map((feat) => (
                   <li key={feat.text} className="flex items-start gap-3">
-                    {feat.included ? (
-                      <Check className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" />
-                    ) : (
-                      <X className="w-4 h-4 text-slate-700 mt-0.5 shrink-0" />
-                    )}
-                    <span className={`text-sm leading-snug ${feat.included ? 'text-slate-300' : 'text-slate-600'}`}>
-                      {feat.text}
-                    </span>
+                    {feat.included
+                      ? <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
+                      : <X className="w-4 h-4 text-zinc-800 mt-0.5 shrink-0" />}
+                    <span className={`text-sm leading-snug ${feat.included ? 'text-zinc-300' : 'text-zinc-700'}`}>{feat.text}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="bg-white/5 rounded-xl p-4 mb-6 border border-white/5">
-                <p className="text-sm text-slate-400 leading-relaxed">{plan.description}</p>
+              <div className="bg-white/4 rounded-xl p-4 mb-6 border border-white/4">
+                <p className="text-sm text-zinc-500 leading-relaxed">{plan.description}</p>
               </div>
 
               <button
@@ -151,12 +146,12 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <p className="text-slate-500 text-sm italic max-w-xl mx-auto mb-6">
+          <p className="text-zinc-600 text-sm italic max-w-xl mx-auto mb-6">
             "This is not about workouts. It's about building a system your body can sustain."
           </p>
           <button
             onClick={() => openWhatsApp('coaching')}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:-translate-y-0.5"
           >
             Apply for Coaching →
           </button>

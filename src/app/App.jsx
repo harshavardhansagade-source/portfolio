@@ -15,7 +15,7 @@ import WhatsAppButton from './components/WhatsAppButton.jsx'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#080d1a]">
+    <div className="min-h-screen bg-[#090909]">
       <Header />
       <Hero />
       <TransformationLoop />
