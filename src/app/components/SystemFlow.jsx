@@ -11,7 +11,7 @@ const steps = [
 
 export default function SystemFlow() {
   return (
-    <section id="system" className="py-24 bg-[#090909]">
+    <section id="system" className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,16 +20,21 @@ export default function SystemFlow() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-4">
-            The System
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
+          <div className="flex items-center gap-4 justify-center mb-5">
+            <div className="h-px w-10 bg-[#111111]/20" />
+            <span className="text-[10px] font-semibold tracking-[0.3em] uppercase text-[#1F4E3A]">The System</span>
+            <div className="h-px w-10 bg-[#111111]/20" />
+          </div>
+          <h2
+            className="text-4xl sm:text-5xl text-[#111111]"
+            style={{ fontFamily: "'DM Serif Display', serif" }}
+          >
             How Your Transformation Works
           </h2>
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-green-500/40 via-green-500/20 to-transparent" />
+          <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#1F4E3A]/40 via-[#1F4E3A]/15 to-transparent" />
           <div className="space-y-6">
             {steps.map((step, i) => (
               <motion.div
@@ -41,14 +46,14 @@ export default function SystemFlow() {
                 className="relative flex gap-6 items-start"
               >
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-[#141414] border border-green-500/20 flex items-center justify-center text-xl">
+                  <div className="w-12 h-12 rounded-full bg-[#F7F9F8] border border-[#1F4E3A]/20 flex items-center justify-center text-xl">
                     {step.emoji}
                   </div>
                 </div>
-                <div className="bg-[#141414] border border-white/6 rounded-2xl p-5 flex-1 hover:border-green-500/20 transition-all duration-300">
-                  <span className="text-xs font-bold text-green-500 uppercase tracking-wider">Step {i + 1}</span>
-                  <h3 className="font-semibold text-white text-lg mt-1 mb-2">{step.title}</h3>
-                  <p className="text-sm text-zinc-500 leading-relaxed">{step.desc}</p>
+                <div className="bg-[#F7F9F8] border border-[#111111]/8 rounded-2xl p-5 flex-1 hover:border-[#1F4E3A]/25 transition-all duration-300">
+                  <span className="text-[10px] font-bold text-[#1F4E3A] uppercase tracking-wider">Step {i + 1}</span>
+                  <h3 className="font-semibold text-[#111111] text-lg mt-1 mb-2">{step.title}</h3>
+                  <p className="text-sm text-[#111111]/55 leading-relaxed">{step.desc}</p>
                 </div>
               </motion.div>
             ))}

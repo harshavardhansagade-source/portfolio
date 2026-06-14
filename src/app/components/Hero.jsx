@@ -6,10 +6,9 @@ export default function Hero() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-[#090909] pt-16">
-      <div className="absolute top-20 left-10 w-80 h-80 rounded-full bg-green-500/8 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-emerald-600/6 blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-green-900/10 blur-3xl pointer-events-none" />
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-white pt-16">
+      <div className="absolute top-32 right-0 w-[600px] h-[600px] rounded-full bg-[#1F4E3A]/4 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#F7F9F8] blur-2xl pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -18,32 +17,30 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 mb-8"
             >
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Accepting New Clients
+              <div className="h-px w-6 bg-[#1F4E3A]" />
+              <span className="text-[10px] font-semibold tracking-[0.3em] uppercase text-[#1F4E3A]">Accepting New Clients</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1F4E3A] animate-pulse" />
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6"
+              className="text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6"
+              style={{ fontFamily: "'DM Serif Display', serif" }}
             >
-              <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
-                Build A Body
-              </span>
+              <span className="text-[#111111]">Build A Body</span>
               <br />
-              <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-green-400 bg-clip-text text-transparent">
-                That Lasts
-              </span>
+              <span className="text-[#1F4E3A]">That Lasts</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg text-zinc-500 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
+              className="text-lg text-[#111111]/55 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
             >
               I build a complete system — nutrition, training, recovery, and mindset — tailored to your life.
             </motion.p>
@@ -56,14 +53,14 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollTo('pricing')}
-                className="group flex items-center justify-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-0.5"
+                className="group flex items-center justify-center gap-2 px-8 py-4 bg-[#1F4E3A] hover:bg-[#17402e] text-white font-semibold rounded-full hover:shadow-xl hover:shadow-[#1F4E3A]/20 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Start Your Transformation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={() => scrollTo('system')}
-                className="flex items-center justify-center gap-2 px-8 py-4 border border-white/12 text-zinc-300 font-semibold rounded-full hover:bg-white/5 hover:border-white/20 transition-all duration-300"
+                className="flex items-center justify-center gap-2 px-8 py-4 border border-[#111111]/15 text-[#111111] font-semibold rounded-full hover:bg-[#111111]/4 hover:border-[#111111]/25 transition-all duration-300"
               >
                 See How It Works
               </button>
@@ -81,12 +78,12 @@ export default function Hero() {
                 { icon: Award, value: '5+ Yrs', label: 'Experience' },
               ].map(({ icon: Icon, value, label }, i) => (
                 <>
-                  {i > 0 && <div key={`div-${i}`} className="w-px h-10 bg-white/8" />}
+                  {i > 0 && <div key={`div-${i}`} className="w-px h-10 bg-[#111111]/12" />}
                   <div key={value} className="flex items-center gap-2">
-                    <Icon className="w-5 h-5 text-green-500" />
+                    <Icon className="w-5 h-5 text-[#1F4E3A]" />
                     <div>
-                      <div className="font-bold text-white text-lg leading-none">{value}</div>
-                      <div className="text-zinc-600 text-xs mt-0.5">{label}</div>
+                      <div className="font-bold text-[#111111] text-lg leading-none">{value}</div>
+                      <div className="text-[#111111]/40 text-xs mt-0.5">{label}</div>
                     </div>
                   </div>
                 </>
@@ -101,22 +98,22 @@ export default function Hero() {
             className="flex flex-col items-center gap-6"
           >
             <div className="relative flex items-center justify-center">
-              <div className="absolute -inset-4 rounded-3xl bg-green-500/10 blur-2xl" />
+              <div className="absolute -inset-4 rounded-3xl bg-[#1F4E3A]/6 blur-2xl" />
               <img
                 src={profileImg}
                 alt="Harshavardhan"
-                className="relative w-72 h-72 lg:w-80 lg:h-80 object-cover rounded-3xl border-2 border-green-500/20 shadow-2xl shadow-green-500/10"
+                className="relative w-72 h-72 lg:w-80 lg:h-80 object-cover rounded-3xl border border-[#111111]/10 shadow-xl shadow-[#111111]/8"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-4 w-full max-w-xs">
-              <div className="bg-white/4 border border-white/8 rounded-2xl p-4 text-center">
-                <div className="text-2xl font-bold text-green-400">95%</div>
-                <div className="text-xs text-zinc-600 mt-1 font-medium">Success Rate</div>
+              <div className="bg-[#F7F9F8] border border-[#111111]/8 rounded-2xl p-4 text-center">
+                <div className="text-2xl font-bold text-[#1F4E3A]">95%</div>
+                <div className="text-xs text-[#111111]/45 mt-1 font-medium">Success Rate</div>
               </div>
-              <div className="bg-white/4 border border-white/8 rounded-2xl p-4 text-center">
-                <div className="text-2xl font-bold text-green-400">12 Wks</div>
-                <div className="text-xs text-zinc-600 mt-1 font-medium">Avg. Results</div>
+              <div className="bg-[#F7F9F8] border border-[#111111]/8 rounded-2xl p-4 text-center">
+                <div className="text-2xl font-bold text-[#1F4E3A]">12 Wks</div>
+                <div className="text-xs text-[#111111]/45 mt-1 font-medium">Avg. Results</div>
               </div>
             </div>
           </motion.div>

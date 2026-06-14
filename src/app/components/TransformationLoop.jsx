@@ -10,7 +10,7 @@ const doubled = [...items, ...items]
 
 export default function TransformationLoop() {
   return (
-    <section className="py-8 bg-[#111111] border-y border-white/6 overflow-hidden">
+    <section className="py-8 bg-[#F7F9F8] border-y border-[#111111]/8 overflow-hidden">
       <div className="flex">
         <motion.div
           animate={{ x: ['0%', '-50%'] }}
@@ -18,9 +18,9 @@ export default function TransformationLoop() {
           className="flex gap-4 shrink-0"
         >
           {doubled.map((item, i) => (
-            <div key={i} className="shrink-0 flex items-center gap-2 px-6 py-3 bg-white/4 border border-white/8 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
-              <span className="text-sm font-medium text-zinc-300 whitespace-nowrap">{item}</span>
+            <div key={i} className="shrink-0 flex items-center gap-2 px-6 py-3 bg-white border border-[#111111]/10 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1F4E3A] shrink-0" />
+              <span className="text-sm font-medium text-[#111111]/70 whitespace-nowrap">{item}</span>
             </div>
           ))}
         </motion.div>

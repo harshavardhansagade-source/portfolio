@@ -2,10 +2,10 @@ import { motion } from 'motion/react'
 import { TrendingDown, TrendingUp, Zap, Heart } from 'lucide-react'
 
 const stats = [
-  { icon: TrendingDown, value: '8–15kg', label: 'Average Fat Lost', color: 'text-green-400' },
-  { icon: TrendingUp,  value: '3–6kg',  label: 'Muscle Gained',    color: 'text-emerald-400' },
-  { icon: Zap,         value: '4x',     label: 'Energy Increase',  color: 'text-green-400' },
-  { icon: Heart,       value: '100%',   label: 'Feel-Good Guarantee', color: 'text-emerald-400' },
+  { icon: TrendingDown, value: '8–15kg', label: 'Average Fat Lost' },
+  { icon: TrendingUp,  value: '3–6kg',  label: 'Muscle Gained' },
+  { icon: Zap,         value: '4x',     label: 'Energy Increase' },
+  { icon: Heart,       value: '100%',   label: 'Feel-Good Guarantee' },
 ]
 
 const transformations = [
@@ -17,7 +17,7 @@ const transformations = [
 
 export default function LifestyleTransformation() {
   return (
-    <section className="py-24 bg-[#111111]">
+    <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,13 +26,18 @@ export default function LifestyleTransformation() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-4">
-            Real Results
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent mb-4">
+          <div className="flex items-center gap-4 justify-center mb-5">
+            <div className="h-px w-10 bg-[#111111]/20" />
+            <span className="text-[10px] font-semibold tracking-[0.3em] uppercase text-[#1F4E3A]">Real Results</span>
+            <div className="h-px w-10 bg-[#111111]/20" />
+          </div>
+          <h2
+            className="text-4xl sm:text-5xl text-[#111111] mb-4"
+            style={{ fontFamily: "'DM Serif Display', serif" }}
+          >
             Transformations That Speak
           </h2>
-          <p className="text-lg text-zinc-500 max-w-2xl mx-auto">
+          <p className="text-lg text-[#111111]/50 max-w-2xl mx-auto">
             Numbers don't lie. Here's what clients typically achieve in their first 90 days.
           </p>
         </motion.div>
@@ -47,11 +52,16 @@ export default function LifestyleTransformation() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-[#161616] border border-white/6 rounded-3xl p-6 text-center"
+                className="bg-[#F7F9F8] border border-[#111111]/8 rounded-3xl p-6 text-center"
               >
-                <Icon className={`w-8 h-8 ${stat.color} mx-auto mb-3`} />
-                <div className={`text-3xl font-extrabold ${stat.color} mb-1`}>{stat.value}</div>
-                <div className="text-sm text-zinc-500 font-medium">{stat.label}</div>
+                <Icon className="w-8 h-8 text-[#1F4E3A] mx-auto mb-3" />
+                <div
+                  className="text-3xl text-[#1F4E3A] mb-1"
+                  style={{ fontFamily: "'DM Serif Display', serif" }}
+                >
+                  {stat.value}
+                </div>
+                <div className="text-sm text-[#111111]/50 font-medium">{stat.label}</div>
               </motion.div>
             )
           })}
@@ -65,11 +75,11 @@ export default function LifestyleTransformation() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-[#161616] border border-white/6 rounded-2xl p-5 hover:border-green-500/20 transition-all duration-300"
+              className="bg-[#F7F9F8] border border-[#111111]/8 rounded-2xl p-5 hover:border-[#1F4E3A]/25 transition-all duration-300"
             >
-              <div className="text-xl font-bold text-white mb-1">{t.name}</div>
-              <div className="text-sm font-medium text-green-400 mb-3">{t.detail}</div>
-              <p className="text-sm text-zinc-600">{t.desc}</p>
+              <div className="text-xl font-bold text-[#111111] mb-1">{t.name}</div>
+              <div className="text-sm font-medium text-[#1F4E3A] mb-3">{t.detail}</div>
+              <p className="text-sm text-[#111111]/45">{t.desc}</p>
             </motion.div>
           ))}
         </div>

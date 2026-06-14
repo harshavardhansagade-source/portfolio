@@ -19,14 +19,16 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? 'bg-[#090909]/95 backdrop-blur-xl border-b border-white/8 shadow-lg shadow-black/40' : 'bg-transparent'
+        scrolled
+          ? 'bg-white/95 backdrop-blur-xl border-b border-[#111111]/8 shadow-sm shadow-[#111111]/5'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <button onClick={() => scrollTo('home')} className="flex items-center gap-2.5">
             <img src={logo} alt="Harshavardhan Logo" className="w-10 h-10 object-contain" />
-            <span className="font-bold text-white text-lg tracking-tight">Harshavardhan</span>
+            <span className="font-semibold text-[#111111] text-lg tracking-tight">Harshavardhan</span>
           </button>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -34,7 +36,7 @@ export default function Header() {
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className="px-4 py-2 text-sm font-medium text-zinc-500 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200"
+                className="px-4 py-2 text-sm font-medium text-[#111111]/50 hover:text-[#111111] hover:bg-[#111111]/5 rounded-full transition-all duration-200"
               >
                 {label}
               </button>
@@ -43,7 +45,7 @@ export default function Header() {
 
           <button
             onClick={() => scrollTo('pricing')}
-            className="px-5 py-2.5 text-sm font-semibold text-white bg-green-600 hover:bg-green-500 rounded-full hover:shadow-lg hover:shadow-green-500/25 hover:-translate-y-0.5 transition-all duration-200"
+            className="px-5 py-2.5 text-sm font-semibold text-white bg-[#1F4E3A] hover:bg-[#17402e] rounded-full hover:shadow-lg hover:shadow-[#1F4E3A]/20 hover:-translate-y-0.5 transition-all duration-200"
           >
             Apply Now
           </button>

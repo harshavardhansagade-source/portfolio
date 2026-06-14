@@ -33,7 +33,7 @@ const doubled = [...testimonials, ...testimonials]
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#090909] overflow-hidden">
+    <section className="py-24 bg-[#F7F9F8] overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,13 +42,18 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-4">
-            Client Stories
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent mb-4">
+          <div className="flex items-center gap-4 justify-center mb-5">
+            <div className="h-px w-10 bg-[#111111]/20" />
+            <span className="text-[10px] font-semibold tracking-[0.3em] uppercase text-[#1F4E3A]">Client Stories</span>
+            <div className="h-px w-10 bg-[#111111]/20" />
+          </div>
+          <h2
+            className="text-4xl sm:text-5xl text-[#111111] mb-4"
+            style={{ fontFamily: "'DM Serif Display', serif" }}
+          >
             What Clients Say
           </h2>
-          <p className="text-lg text-zinc-500">Real people, real results, real stories.</p>
+          <p className="text-lg text-[#111111]/50">Real people, real results, real stories.</p>
         </motion.div>
       </div>
 
@@ -59,20 +64,20 @@ export default function Testimonials() {
           className="flex gap-5 shrink-0 px-2.5"
         >
           {doubled.map((t, i) => (
-            <div key={i} className="w-80 shrink-0 bg-[#141414] border border-white/6 rounded-3xl p-6 hover:border-green-500/15 transition-colors duration-300">
+            <div key={i} className="w-80 shrink-0 bg-white border border-[#111111]/8 rounded-3xl p-6 hover:border-[#1F4E3A]/20 transition-colors duration-300">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-3.5 h-3.5 text-green-400 fill-green-400" />
+                  <Star key={j} className="w-3.5 h-3.5 text-[#1F4E3A] fill-[#1F4E3A]" />
                 ))}
               </div>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-6 line-clamp-4">"{t.text}"</p>
+              <p className="text-[#111111]/65 text-sm leading-relaxed mb-6 line-clamp-4">"{t.text}"</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-green-500/15 border border-green-500/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-green-400 font-bold text-xs">{t.initials}</span>
+                <div className="w-10 h-10 rounded-full bg-[#1F4E3A]/10 border border-[#1F4E3A]/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#1F4E3A] font-bold text-xs">{t.initials}</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-white text-sm">{t.name}</div>
-                  <div className="text-green-400 text-xs font-medium">{t.result}</div>
+                  <div className="font-semibold text-[#111111] text-sm">{t.name}</div>
+                  <div className="text-[#1F4E3A] text-xs font-medium">{t.result}</div>
                 </div>
               </div>
             </div>

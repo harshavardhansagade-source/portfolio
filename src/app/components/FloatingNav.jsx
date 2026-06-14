@@ -45,7 +45,7 @@ export default function FloatingNav() {
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
         >
-          <div className="flex items-center gap-0.5 bg-[#111111]/95 backdrop-blur-xl border border-white/8 rounded-full shadow-2xl shadow-black/60 px-2 py-1.5">
+          <div className="flex items-center gap-0.5 bg-white/95 backdrop-blur-xl border border-[#111111]/10 rounded-full shadow-lg shadow-[#111111]/10 px-2 py-1.5">
             {navItems.map(({ id, label }) => (
               <button
                 key={id}
@@ -55,11 +55,11 @@ export default function FloatingNav() {
                 {active === id && (
                   <motion.div
                     layoutId="activeNavPill"
-                    className="absolute inset-0 bg-green-600 rounded-full"
+                    className="absolute inset-0 bg-[#1F4E3A] rounded-full"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
-                <span className={`relative z-10 ${active === id ? 'text-white' : 'text-zinc-600 hover:text-zinc-300'}`}>
+                <span className={`relative z-10 ${active === id ? 'text-white' : 'text-[#111111]/40 hover:text-[#111111]'}`}>
                   {label}
                 </span>
               </button>
