@@ -17,7 +17,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-6xl sm:text-7xl lg:text-8xl leading-tight mb-10"
+              className="text-6xl sm:text-7xl lg:text-8xl leading-tight mb-6"
               style={{ fontFamily: "'DM Serif Display', serif" }}
             >
               <span className="text-[#111111]">Build A Body</span>
@@ -25,10 +25,19 @@ export default function Hero() {
               <span className="text-[#1F4E3A]">That Lasts</span>
             </motion.h1>
 
-            <motion.div
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg text-[#111111]/55 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
+            >
+              I build a complete system. Nutrition, training, recovery, and mindset tailored to your life.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <button
