@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
-import profileImg from '../../imports/image-1.png'
+import profileImg from '../../imports/image-2.jpeg'
 
 export default function Hero() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })

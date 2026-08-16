@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { Award, Users, Clock, Target } from 'lucide-react'
-import profileImg from '../../imports/image-1.png'
+import profileImg from '../../imports/image-2.jpeg'
 
 const credentials = [
   { icon: Award,  label: 'Certified Coach', value: 'IFSA & ACSM' },
