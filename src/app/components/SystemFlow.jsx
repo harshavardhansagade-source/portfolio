@@ -2,11 +2,11 @@ import { motion } from 'motion/react'
 
 const steps = [
   { emoji: '🎯', title: 'Assessment', desc: 'We analyze your current body composition, lifestyle, sleep patterns, and habits to understand where you truly stand.' },
-  { emoji: '🗺️', title: 'Goal Mapping', desc: 'We set realistic, measurable milestones tailored to your timeline — no guesswork, no generic targets.' },
+  { emoji: '🗺️', title: 'Goal Mapping', desc: 'We set realistic, measurable milestones tailored to your timeline. No guesswork, no generic targets.' },
   { emoji: '📋', title: 'Program Design', desc: 'A fully personalized workout and nutrition plan built around your schedule, equipment, and body type.' },
   { emoji: '📊', title: 'Daily Tracking', desc: "Every meal, workout, and recovery metric is tracked and logged so we always know exactly what's working." },
   { emoji: '🔄', title: 'Optimization', desc: 'Weekly reviews and data-driven adjustments ensure your plan evolves as your body does.' },
-  { emoji: '🌟', title: 'Lifestyle Integration', desc: "We build sustainable habits that don't disappear after the program ends — this is a life upgrade, not a quick fix." },
+  { emoji: '🌟', title: 'Lifestyle Integration', desc: "We build sustainable habits that don't disappear after the program ends. This is a life upgrade, not a quick fix." },
 ]
 
 export default function SystemFlow() {

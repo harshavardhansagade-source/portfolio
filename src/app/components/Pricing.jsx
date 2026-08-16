@@ -9,19 +9,18 @@ const openWhatsApp = (plan) => {
 
 const plans = [
   {
-    name: 'Foundation',
-    price: '₹2,121',
+    name: 'Structured Coaching',
+    price: '₹4,999',
     validity: '1 month validity',
     badge: null,
-    description: 'Best for: Self-driven individuals who just need the right plan.',
+    description: 'Best for: People who want a complete plan with daily accountability and structured guidance.',
     features: [
       { text: 'Personalized Workout Plan', included: true },
       { text: 'Custom Meal Plan', included: true },
-      { text: 'Macro Tracking Sheet', included: true },
-      { text: 'Monthly Check-in Call', included: true },
-      { text: 'Email Support', included: true },
-      { text: 'Weekly Video Check-ins', included: false },
-      { text: '24/7 WhatsApp Support', included: false },
+      { text: 'Daily WhatsApp Check-ins', included: true },
+      { text: 'Progress Tracking Dashboard', included: true },
+      { text: 'Weekly Strategy Calls', included: true },
+      { text: 'Habit Building Framework', included: true },
     ],
     cta: 'Get Started',
     cardClass: 'bg-[#F7F9F8] border border-[#111111]/10',
@@ -29,30 +28,10 @@ const plans = [
     highlight: false,
   },
   {
-    name: 'Structured Coaching',
-    price: '₹9,696',
-    validity: '1 month validity',
-    badge: 'RECOMMENDED',
-    description: 'Best for: People who struggle with consistency and need guidance.',
-    features: [
-      { text: 'Everything in Foundation', included: true },
-      { text: 'Weekly Video Check-ins', included: true },
-      { text: '24/7 WhatsApp Support', included: true },
-      { text: 'Progress Tracking Dashboard', included: true },
-      { text: 'Form Correction Feedback', included: true },
-      { text: 'Habit Building Framework', included: true },
-      { text: 'Daily 1-on-1 Sessions', included: false },
-    ],
-    cta: 'Apply for Coaching',
-    cardClass: 'bg-white border-2 border-[#1F4E3A]/35',
-    btnClass: 'bg-[#1F4E3A] hover:bg-[#17402e] text-white hover:shadow-lg hover:shadow-[#1F4E3A]/15',
-    highlight: true,
-  },
-  {
     name: 'Complete Transformation',
     price: '₹21,212',
     validity: '1 month validity',
-    badge: null,
+    badge: 'RECOMMENDED',
     description: 'Best for: Individuals who want high-level support and hands-on coaching.',
     features: [
       { text: 'Everything in Structured', included: true },
@@ -65,16 +44,16 @@ const plans = [
       { text: 'Daily 1-on-1 Sessions', included: true },
     ],
     cta: 'Apply for Coaching',
-    cardClass: 'bg-[#F7F9F8] border border-[#1F4E3A]/20',
-    btnClass: 'border border-[#1F4E3A]/30 text-[#1F4E3A] hover:bg-[#1F4E3A]/8',
-    highlight: false,
+    cardClass: 'bg-white border-2 border-[#1F4E3A]/35',
+    btnClass: 'bg-[#1F4E3A] hover:bg-[#17402e] text-white hover:shadow-lg hover:shadow-[#1F4E3A]/15',
+    highlight: true,
   },
 ]
 
 export default function Pricing() {
   return (
     <section id="pricing" className="py-24 bg-[#F7F9F8]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -95,7 +74,7 @@ export default function Pricing() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -103,7 +82,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative rounded-3xl p-6 ${plan.cardClass} ${plan.highlight ? 'md:scale-105 shadow-xl shadow-[#1F4E3A]/8' : ''}`}
+              className={`relative rounded-3xl p-6 ${plan.cardClass} ${plan.highlight ? 'shadow-xl shadow-[#1F4E3A]/8' : ''}`}
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -154,7 +133,7 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
           <p className="text-[#111111]/40 text-sm italic max-w-xl mx-auto mb-6">

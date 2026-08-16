@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import { Star } from 'lucide-react'
 
 const testimonials = [
-  { name: 'Rohan M.',     result: 'Lost 14kg in 3 months',           text: "I had tried every gym and diet before. Harshavardhan's system is different — it actually fits into real life. I didn't feel like I was sacrificing everything.",                initials: 'RM' },
+  { name: 'Rohan M.',     result: 'Lost 14kg in 3 months',           text: "I had tried every gym and diet before. Harshavardhan's system is different, it actually fits into real life. I didn't feel like I was sacrificing everything.",                initials: 'RM' },
   { name: 'Priya S.',     result: 'Gained lean muscle, lost inches',  text: 'The meal plans were foods I actually enjoy. The WhatsApp check-ins kept me accountable without feeling judged. Huge difference from generic trainers.',                        initials: 'PS' },
   { name: 'Arjun K.',     result: 'Reversed pre-diabetes markers',    text: 'My doctor was shocked at my 3-month bloodwork. This program taught me that fitness is medicine, and Harshavardhan made it simple to execute.',                                  initials: 'AK' },
   { name: 'Sneha R.',     result: 'From 0 to 10K run in 8 weeks',    text: 'I was never athletic. Now I run 5KMs as a warm-up. The progressive approach made it feel effortless. Highly recommend for beginners.',                                          initials: 'SR' },

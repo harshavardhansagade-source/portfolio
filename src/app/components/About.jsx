@@ -78,11 +78,11 @@ export default function About() {
 
             <div className="bg-white border border-[#111111]/8 rounded-3xl p-6 space-y-4 text-[#111111]/65 text-[15px] leading-relaxed">
               <p>
-                I spent years watching people struggle with fitness — not because they lacked willpower, but because they were following systems that were never designed for real life.
+                I spent years watching people struggle with fitness, not because they lacked willpower, but because they were following systems that were never designed for real life.
               </p>
               <p>
                 I'm not here to give you a 6-week crash course. I'm here to build you a{' '}
-                <strong className="text-[#111111]">sustainable system</strong> — one that works with your job, your family, and your social life.
+                <strong className="text-[#111111]">sustainable system</strong>, one that works with your job, your family, and your social life.
               </p>
               <p>
                 Every client I work with gets a fully personalized plan based on their body, their schedule, and their goals. No cookie-cutter templates. No generic advice.
