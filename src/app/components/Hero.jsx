@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { ArrowRight, Users, Star, Award } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import profileImg from '../../imports/image-1.png'
 
 export default function Hero() {
@@ -13,22 +13,11 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 mb-8"
-            >
-              <div className="h-px w-6 bg-[#1F4E3A]" />
-              <span className="text-[10px] font-semibold tracking-[0.3em] uppercase text-[#1F4E3A]">Accepting New Clients</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1F4E3A] animate-pulse" />
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-6xl sm:text-7xl lg:text-8xl leading-tight mb-10"
               style={{ fontFamily: "'DM Serif Display', serif" }}
             >
               <span className="text-[#111111]">Build A Body</span>
@@ -36,26 +25,17 @@ export default function Hero() {
               <span className="text-[#1F4E3A]">That Lasts</span>
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg text-[#111111]/55 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
-            >
-              I build a complete system — nutrition, training, recovery, and mindset — tailored to your life.
-            </motion.p>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <button
-                onClick={() => scrollTo('pricing')}
+                onClick={() => scrollTo('contact')}
                 className="group flex items-center justify-center gap-2 px-8 py-4 bg-[#1F4E3A] hover:bg-[#17402e] text-white font-semibold rounded-full hover:shadow-xl hover:shadow-[#1F4E3A]/20 transition-all duration-300 hover:-translate-y-0.5"
               >
-                Start Your Transformation
+                Book a Call
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
@@ -64,30 +44,6 @@ export default function Hero() {
               >
                 See How It Works
               </button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex items-center gap-8 mt-12 justify-center lg:justify-start"
-            >
-              {[
-                { icon: Users, value: '200+', label: 'Clients' },
-                { icon: Star, value: '4.9/5', label: 'Rating' },
-                { icon: Award, value: '5+ Yrs', label: 'Experience' },
-              ].map(({ icon: Icon, value, label }, i) => (
-                <>
-                  {i > 0 && <div key={`div-${i}`} className="w-px h-10 bg-[#111111]/12" />}
-                  <div key={value} className="flex items-center gap-2">
-                    <Icon className="w-5 h-5 text-[#1F4E3A]" />
-                    <div>
-                      <div className="font-bold text-[#111111] text-lg leading-none">{value}</div>
-                      <div className="text-[#111111]/40 text-xs mt-0.5">{label}</div>
-                    </div>
-                  </div>
-                </>
-              ))}
             </motion.div>
           </div>
 
