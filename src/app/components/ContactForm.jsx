@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Send, CheckCircle } from 'lucide-react'
 
-const COACH_EMAIL = 'harshavardhansagade@gmail.com'
+const COACH_EMAIL = 'coachharshavardhan360@gmail.com'
 
 const inputClass = `
   w-full bg-white border border-[#111111]/12 rounded-2xl px-4 py-3.5

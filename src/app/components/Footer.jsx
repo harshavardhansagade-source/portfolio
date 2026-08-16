@@ -34,12 +34,13 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-[#111111] mb-4">Connect</h4>
             <div className="flex gap-3 mb-4">
-              {[Instagram, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white border border-[#111111]/10 flex items-center justify-center text-[#111111]/45 hover:text-[#1F4E3A] hover:border-[#1F4E3A]/20 transition-all">
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-              <a href="mailto:harshavardhansagade@gmail.com" className="w-10 h-10 rounded-full bg-white border border-[#111111]/10 flex items-center justify-center text-[#111111]/45 hover:text-[#1F4E3A] hover:border-[#1F4E3A]/20 transition-all">
+              <a href="https://www.instagram.com/coach_harshavardhan/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white border border-[#111111]/10 flex items-center justify-center text-[#111111]/45 hover:text-[#1F4E3A] hover:border-[#1F4E3A]/20 transition-all">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white border border-[#111111]/10 flex items-center justify-center text-[#111111]/45 hover:text-[#1F4E3A] hover:border-[#1F4E3A]/20 transition-all">
+                <Youtube className="w-4 h-4" />
+              </a>
+              <a href="mailto:coachharshavardhan360@gmail.com" className="w-10 h-10 rounded-full bg-white border border-[#111111]/10 flex items-center justify-center text-[#111111]/45 hover:text-[#1F4E3A] hover:border-[#1F4E3A]/20 transition-all">
                 <Mail className="w-4 h-4" />
               </a>
             </div>
