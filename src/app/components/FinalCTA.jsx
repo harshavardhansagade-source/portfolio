@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { ArrowRight, MessageCircle } from 'lucide-react'
 
-const WHATSAPP_NUMBER = '917021172760'
+const WHATSAPP_NUMBER = '918451861903'
 
 export default function FinalCTA() {
   const openWhatsApp = () => {

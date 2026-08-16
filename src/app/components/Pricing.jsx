@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { Check, X, ArrowRight } from 'lucide-react'
 
-const WHATSAPP_NUMBER = '917021172760'
+const WHATSAPP_NUMBER = '918451861903'
 const openWhatsApp = (plan) => {
   const msg = encodeURIComponent(`Hi! I'm interested in the ${plan} coaching plan.`)
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank')
