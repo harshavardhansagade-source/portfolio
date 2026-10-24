@@ -30,7 +30,7 @@ export default function FinalCTA() {
 
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
+            style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
           >
             Ready to Build Your
             <br />

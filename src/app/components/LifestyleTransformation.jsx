@@ -33,7 +33,7 @@ export default function LifestyleTransformation() {
           </div>
           <h2
             className="text-4xl sm:text-5xl text-[#111111] mb-4"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
+            style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
           >
             Transformations That Speak
           </h2>
@@ -57,7 +57,7 @@ export default function LifestyleTransformation() {
                 <Icon className="w-8 h-8 text-[#1F4E3A] mx-auto mb-3" />
                 <div
                   className="text-3xl text-[#1F4E3A] mb-1"
-                  style={{ fontFamily: "'DM Serif Display', serif" }}
+                  style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
                 >
                   {stat.value}
                 </div>

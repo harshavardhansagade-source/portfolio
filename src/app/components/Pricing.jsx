@@ -68,7 +68,7 @@ export default function Pricing() {
           </div>
           <h2
             className="text-4xl sm:text-5xl text-[#111111]"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
+            style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
           >
             Choose Your Plan
           </h2>
@@ -96,7 +96,7 @@ export default function Pricing() {
                 <h3 className="font-semibold text-[#111111] text-xl mb-3">{plan.name}</h3>
                 <div
                   className="text-4xl text-[#111111]"
-                  style={{ fontFamily: "'DM Serif Display', serif" }}
+                  style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
                 >
                   {plan.price}
                 </div>

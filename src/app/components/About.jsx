@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { Award, Users, Clock, Target } from 'lucide-react'
-import profileImg from '../../imports/image-2.jpeg'
+import profileImg from '../../imports/image-3.jpeg'
 
 const credentials = [
   { icon: Award,  label: 'Certified Coach', value: 'IFSA & ACSM' },
@@ -27,7 +27,7 @@ export default function About() {
           </div>
           <h2
             className="text-4xl sm:text-5xl text-[#111111]"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
+            style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
           >
             Your Coach
           </h2>
@@ -43,8 +43,8 @@ export default function About() {
           >
             <div className="relative">
               <div className="absolute -inset-3 rounded-3xl bg-[#1F4E3A]/6 blur-xl" />
-              <div className="relative w-48 h-48 rounded-3xl overflow-hidden border border-[#111111]/10 shadow-lg shadow-[#111111]/8">
-                <img src={profileImg} alt="Harshavardhan" className="w-full h-full object-cover" />
+              <div className="relative w-60 h-80 rounded-3xl overflow-hidden border border-[#111111]/10 shadow-lg shadow-[#111111]/8">
+                <img src={profileImg} alt="Harshavardhan" className="w-full h-full object-cover object-top" />
               </div>
             </div>
 
@@ -70,7 +70,7 @@ export default function About() {
           >
             <h3
               className="text-3xl text-[#111111] mb-4"
-              style={{ fontFamily: "'DM Serif Display', serif" }}
+              style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
             >
               Hi, I'm{' '}
               <span className="text-[#1F4E3A]">Harshavardhan</span>

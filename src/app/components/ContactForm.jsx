@@ -43,7 +43,7 @@ export default function ContactForm() {
           </div>
           <h2
             className="text-4xl sm:text-5xl text-[#111111] mb-4"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
+            style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
           >
             Contact Me
           </h2>

@@ -17,8 +17,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-6xl sm:text-7xl lg:text-8xl leading-tight mb-6"
-              style={{ fontFamily: "'DM Serif Display', serif" }}
+              className="text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6"
+              style={{ fontFamily: "'Archivo', sans-serif", fontWeight: 800, letterSpacing: '-0.035em' }}
             >
               <span className="text-[#111111]">Build A Body</span>
               <br />

@@ -3,7 +3,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #FFFFFF;
   color: #111111;
   overflow-x: hidden;
