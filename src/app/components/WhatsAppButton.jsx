@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 
-const WHATSAPP_NUMBER = '918451861903'
+const WHATSAPP_NUMBER = '917021172760'
 
 export default function WhatsAppButton() {
   const openWhatsApp = () => {
